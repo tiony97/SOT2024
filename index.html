@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+			rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+		<link rel="stylesheet" href="./tailwind.css" />
+		<link rel="stylesheet" href="./style.css" />
+		<title>SOT</title>
+	</head>
+	<body>
+		<!--Main Menu-->
+		<header class="primary-nav w-full flex items-center justify-between lg:px-12 md:px-12 px-6">
+			<a href="#" class="logo"><img src="./sot_logo.png" alt="logo" /></a>
+
+			<!--Menu Links-->
+			<ul class="main-menu flex">
+				<li class="menu-item"><a href="#">Home</a></li>
+				<li class="menu-item"><a href="#">About Us</a></li>
+				<li class="menu-item menu-item-has-children">
+					<a href="#">Topic Areas</a>
+					<ul class="sub-menu">
+						<li class="menu-item"><a href="#">Assessment-Informed Instruction </a></li>
+						<li class="menu-item"><a href="#">Language of Instruction </a></li>
+
+						<li class="menu-item menu-item-has-children">
+							<a href="#">Materials Development </a>
+
+							<ul class="sub-menu">
+								<li class="menu-item">
+									<a href="#"
+										>Curriculum Scope and Sequence Development for Literacy and Numeracy
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#">Teaching and Learning: Materials Development </a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="menu-item"><a href="#">Remediation</a></li>
+						<li class="menu-item"><a href="#">Structured Pedagogy</a></li>
+
+						<li class="menu-item menu-item-has-children">
+							<a href="#">Teacher Professional Development </a>
+
+							<ul class="sub-menu">
+								<li class="menu-item">
+									<a href="#">Teacher Training</a>
+								</li>
+								<li class="menu-item">
+									<a href="#">Ongoing Teacher Support </a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="menu-item menu-item-has-children">
+					<a href="#">Resources</a>
+					<ul class="sub-menu">
+						<li class="menu-item"><a href="#">Blogs</a></li>
+						<li class="menu-item"><a href="#">Checklists</a></li>
+						<li class="menu-item"><a href="#">High-Impact Teaching Strategies (HITS)</a></li>
+						<li class="menu-item"><a href="#">How-To-Guides</a></li>
+						<li class="menu-item"><a href="#">Webinar Recordings & Video Guides</a></li>
+					</ul>
+				</li>
+				<li class="menu-item menu-item-has-children">
+					<a href="#">Technical Assistance</a>
+					<ul class="sub-menu">
+						<li class="menu-item"><a href="#">The Gambia</a></li>
+						<li class="menu-item"><a href="#">Malawi</a></li>
+						<li class="menu-item"><a href="#">Kenya</a></li>
+						<li class="menu-item"><a href="#">Pakistan</a></li>
+						<li class="menu-item"><a href="#">Rwanda</a></li>
+						<li class="menu-item"><a href="#">Sierra Leone</a></li>
+						<li class="menu-item"><a href="#">South Sudan</a></li>
+						<li class="menu-item"><a href="#">Tanzania</a></li>
+						<li class="menu-item"><a href="#">Uganda</a></li>
+					</ul>
+				</li>
+				<li class="menu-item menu-item-has-children">
+					<a href="#">Numeracy-focused</a>
+					<ul class="sub-menu">
+						<li class="menu-item"><a href="#">e-Learning</a></li>
+
+						<li class="menu-item menu-item-has-children">
+							<a href="#">Math Resources</a>
+
+							<ul class="sub-menu">
+								<li class="menu-item">
+									<a href="#">How-To Guide </a>
+								</li>
+								<li class="menu-item">
+									<a href="#">Mini-modules </a>
+								</li>
+								<li class="menu-item">
+									<a href="#">Materials Guide </a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="menu-item menu-item-has-children">
+							<a href="#">Research</a>
+
+							<ul class="sub-menu">
+								<li class="menu-item">
+									<a href="#"
+										>Upcoming: South Africa: WhatsApp API-based CPD to improve teachers’
+										mathematical knowledge
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#"
+										>Ghana: Using co-creation to develop lessons/activities that support students’
+										problem-solving skills.
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#"
+										>South Africa: Strengthening Base-10 thinking strategies of teachers and
+										students
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="menu-item"><a href="#">CoP</a></li>
+					</ul>
+				</li>
+				<li class="menu-item menu-item-has-children">
+					<a href="#">Research</a>
+					<ul class="sub-menu">
+						<li class="menu-item"><a href="#">Middle Tier</a></li>
+						<li class="menu-item"><a href="#">Math</a></li>
+						<li class="menu-item"><a href="#">Assessment-Informed Instruction</a></li>
+						<li class="menu-item"><a href="#">Remediation</a></li>
+						<li class="menu-item"><a href="#">Coaching</a></li>
+					</ul>
+				</li>
+				<li class="menu-item"><a href="#">Contact Us</a></li>
+			</ul>
+		</header>
+
+		<!--Mobile Menu-->
+		<div class="mobile-nav w-full flex items-center justify-between lg:px-12 md:px-12 px-6">
+			<a href="#" class="logo"><img src="./sot_logo.png" alt="logo" /></a>
+
+			<span id="menu-toggle" class="flex items-center justify-center"
+				><i class="fas fa-bars"></i
+			></span>
+
+			<!--Mobile Menu Links-->
+			<ul class="mobile-menu lg:px-12 md:px-12 px-6">
+				<li class="menu-item"><a href="#">Home</a></li>
+				<li class="menu-item"><a href="#">About Us</a></li>
+				<li class="menu-item menu-item-has-children">
+					<a href="#" class="sub-menu-toggle">Topic Areas</a>
+					<ul class="sub-menu">
+						<li class="menu-item"><a href="#">Assessment-Informed Instruction </a></li>
+						<li class="menu-item"><a href="#">Language of Instruction </a></li>
+
+						<li class="menu-item menu-item-has-children">
+							<a href="#">Materials Development </a>
+
+							<ul class="sub-menu">
+								<li class="menu-item">
+									<a href="#"
+										>Curriculum Scope and Sequence Development for Literacy and Numeracy
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#">Teaching and Learning: Materials Development </a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="menu-item"><a href="#">Remediation</a></li>
+						<li class="menu-item"><a href="#">Structured Pedagogy</a></li>
+
+						<li class="menu-item menu-item-has-children">
+							<a href="#">Teacher Professional Development </a>
+
+							<ul class="sub-menu">
+								<li class="menu-item">
+									<a href="#">Teacher Training</a>
+								</li>
+								<li class="menu-item">
+									<a href="#">Ongoing Teacher Support </a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="menu-item menu-item-has-children">
+					<a href="#" class="sub-menu-toggle">Resources</a>
+					<ul class="sub-menu">
+						<li class="menu-item"><a href="#">Blogs</a></li>
+						<li class="menu-item"><a href="#">Checklists</a></li>
+						<li class="menu-item"><a href="#">High-Impact Teaching Strategies (HITS)</a></li>
+						<li class="menu-item"><a href="#">How-To-Guides</a></li>
+						<li class="menu-item"><a href="#">Webinar Recordings & Video Guides</a></li>
+					</ul>
+				</li>
+				<li class="menu-item menu-item-has-children">
+					<a href="#" class="sub-menu-toggle">Technical Assistance</a>
+					<ul class="sub-menu">
+						<li class="menu-item"><a href="#">The Gambia</a></li>
+						<li class="menu-item"><a href="#">Malawi</a></li>
+						<li class="menu-item"><a href="#">Kenya</a></li>
+						<li class="menu-item"><a href="#">Pakistan</a></li>
+						<li class="menu-item"><a href="#">Rwanda</a></li>
+						<li class="menu-item"><a href="#">Sierra Leone</a></li>
+						<li class="menu-item"><a href="#">South Sudan</a></li>
+						<li class="menu-item"><a href="#">Tanzania</a></li>
+						<li class="menu-item"><a href="#">Uganda</a></li>
+					</ul>
+				</li>
+				<li class="menu-item menu-item-has-children">
+					<a href="#" class="sub-menu-toggle">Numeracy-focused</a>
+					<ul class="sub-menu">
+						<li class="menu-item"><a href="#">e-Learning</a></li>
+
+						<li class="menu-item menu-item-has-children">
+							<a href="#">Math Resources</a>
+
+							<ul class="sub-menu">
+								<li class="menu-item">
+									<a href="#">How-To Guide </a>
+								</li>
+								<li class="menu-item">
+									<a href="#">Mini-modules </a>
+								</li>
+								<li class="menu-item">
+									<a href="#">Materials Guide </a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="menu-item menu-item-has-children">
+							<a href="#">Research</a>
+
+							<ul class="sub-menu">
+								<li class="menu-item">
+									<a href="#"
+										>Upcoming: South Africa: WhatsApp API-based CPD to improve teachers’
+										mathematical knowledge
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#"
+										>Ghana: Using co-creation to develop lessons/activities that support students’
+										problem-solving skills.
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#"
+										>South Africa: Strengthening Base-10 thinking strategies of teachers and
+										students
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="menu-item"><a href="#">CoP</a></li>
+					</ul>
+				</li>
+				<li class="menu-item menu-item-has-children">
+					<a href="#" class="sub-menu-toggle">Research</a>
+					<ul class="sub-menu">
+						<li class="menu-item"><a href="#">Middle Tier</a></li>
+						<li class="menu-item"><a href="#">Math</a></li>
+						<li class="menu-item"><a href="#">Assessment-Informed Instruction</a></li>
+						<li class="menu-item"><a href="#">Remediation</a></li>
+						<li class="menu-item"><a href="#">Coaching</a></li>
+					</ul>
+				</li>
+				<li class="menu-item"><a href="#">Contact Us</a></li>
+			</ul>
+		</div>
+
+		<!--JS-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+
+		<!--JS Script to maintain sub menus within the screen width -->
+		<script>
+			$(document).ready(function () {
+				$(".menu-item.menu-item-has-children").hover(function () {
+					var $submenu = $(this).children(".sub-menu");
+					var submenuWidth = $submenu.outerWidth();
+					var submenuOffset = $submenu.offset();
+					var windowWidth = $(window).width();
+
+					// Check if the submenu overflows the window width
+					/*if (submenuOffset.left + submenuWidth > windowWidth) {
+						$submenu.css("left", "auto");
+						$submenu.css("right", "100%");
+					} else {
+						$submenu.css("left", "100%");
+						$submenu.css("right", "auto");
+					}*/
+
+					// Handle nested submenus
+					$submenu.children(".menu-item.menu-item-has-children").hover(function () {
+						var $nestedSubmenu = $(this).children(".sub-menu");
+						var nestedSubmenuWidth = $nestedSubmenu.outerWidth();
+						var nestedSubmenuOffset = $nestedSubmenu.offset();
+
+						if (nestedSubmenuOffset.left + nestedSubmenuWidth > windowWidth) {
+							$nestedSubmenu.css("left", "auto");
+							$nestedSubmenu.css("right", "100%");
+						} else {
+							$nestedSubmenu.css("left", "100%");
+							$nestedSubmenu.css("right", "auto");
+						}
+					});
+				});
+			});
+		</script>
+
+		<!--Mobile Menu-->
+		<script>
+			//Menu Toggler
+			$(document).ready(function () {
+				$("#menu-toggle").click(function () {
+					$(".mobile-menu").slideToggle("slow", function () {
+						if ($(".mobile-menu").is(":visible")) {
+							$("#menu-toggle i").css("display", "none !important"); // Hide the Font Awesome icon
+							if (!$("#menu-toggle .close-icon").length) {
+								$("#menu-toggle").append(
+									'<span class="close-icon" style="font-size: 24px;">&#x00D7;</span>'
+								); // Add the Unicode "×" character
+							}
+						} else {
+							$("#menu-toggle i").css("display", "inline"); // Show the Font Awesome icon
+							$("#menu-toggle .close-icon").remove(); // Remove the Unicode "×" character
+						}
+					});
+				});
+			});
+
+			//Mobile Menu Accordion
+			$(document).ready(function () {
+				$(".menu-item-has-children .sub-menu-toggle").click(function () {
+					// Close all other accordion items
+					$(".menu-item-has-children .sub-menu").not($(this).next()).slideUp();
+
+					$(".menu-item-has-children .sub-menu-toggle").not($(this)).removeClass("active");
+
+					// Toggle the clicked accordion item
+					$(this).next().slideToggle();
+					$(this).toggleClass("active");
+				});
+			});
+		</script>
+	</body>
+</html>

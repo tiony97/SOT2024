@@ -1,0 +1,246 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Rubik", sans-serif;
+	overflow-x: hidden;
+}
+
+.primary-nav {
+	background: radial-gradient(circle, #128fa5 20%, #12385d 100%);
+	z-index: 10;
+	.logo {
+		img {
+			width: auto;
+			height: auto;
+			object-fit: contain;
+		}
+	}
+	.main-menu {
+		list-style: none;
+		height: auto;
+		.menu-item {
+			position: relative;
+			height: 90px;
+			display: flex;
+			align-items: center;
+			margin-right: 1em;
+			a {
+				font-size: 14px;
+				font-weight: 400;
+				color: #82cfca;
+				transition: all 0.3s ease-in;
+				&:hover,
+				&:focus {
+					color: #fff;
+					font-weight: 700;
+				}
+			}
+			&:last-of-type {
+				margin: 0;
+			}
+
+			/* Child Menu Settings */
+			.sub-menu {
+				display: none;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				background: #fff;
+				box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+				z-index: 15;
+				.menu-item {
+					position: relative;
+					height: auto;
+					margin: 0;
+					a {
+						width: 200px;
+						color: #002147;
+						padding: 10px;
+						display: block;
+					}
+					&:hover {
+						background-color: #82cfca;
+					}
+				}
+			}
+
+			&.menu-item-has-children {
+				cursor: pointer;
+
+				&::after {
+					content: "▼";
+					font-size: 10px;
+					margin-top: 4px;
+					margin-left: 5px;
+					color: #fff;
+				}
+
+				.sub-menu {
+					display: none;
+					position: absolute;
+					top: 100%;
+					left: 0;
+					list-style: none;
+					padding: 0;
+					margin: 0;
+					background: #fff;
+					box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+					.menu-item {
+						position: relative;
+						a {
+							padding: 10px 15px;
+							display: block;
+							width: 200px;
+							white-space: wrap;
+						}
+
+						/* Second Level Sub Menu*/
+						.sub-menu {
+							display: none;
+							position: absolute;
+							top: 0;
+							left: 100%;
+						}
+						&:hover .sub-menu {
+							display: block;
+						}
+						&:hover > a,
+						&:focus-within > a {
+							font-weight: 700;
+						}
+						/* Second Level Sub Menu Link*/
+						&.menu-item-has-children {
+							&::after {
+								content: "▼";
+								font-size: 10px;
+								margin-top: 0px;
+								margin-left: 5px;
+								margin-right: 5px;
+								color: #002147;
+								transform: rotate(-90deg);
+							}
+						}
+					}
+				}
+			}
+
+			&:hover .sub-menu,
+			&:focus-within > .submenu {
+				display: block;
+			}
+
+			&:hover > a,
+			&:focus-within > a {
+				color: #fff;
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+.mobile-nav {
+	display: none;
+	position: relative;
+	background: radial-gradient(circle, #128fa5 20%, #12385d 100%);
+	height: 90px;
+	z-index: 10;
+	.logo {
+		img {
+			width: auto;
+			height: auto;
+			object-fit: contain;
+		}
+	}
+
+	#menu-toggle {
+		width: 40px;
+		height: 40px;
+		border: 1px solid #fff;
+		border-radius: 50%;
+		font-size: 18px;
+		color: #fff;
+		cursor: pointer;
+	}
+	.mobile-menu {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		height: calc(100vh - 90px);
+		overflow-y: auto;
+		background-color: #002147 !important;
+		color: #fff;
+		z-index: 20;
+		.menu-item {
+			padding: 10px 0;
+			width: 100%;
+			a {
+				width: 100%;
+			}
+		}
+		.sub-menu {
+			padding: 1em;
+			.menu-item {
+				padding: 0;
+				margin-bottom: 5px;
+				&:last-of-type {
+					margin: 0;
+				}
+			}
+		}
+
+		.menu-item-has-children {
+			width: 100% !important;
+
+			.sub-menu-toggle {
+				width: 100% !important;
+				transition: all 0.3s ease;
+				&:hover {
+					color: #0056b3;
+				}
+				&::after {
+					content: "\25BC"; /* Unicode character for down arrow */
+					font-size: 12px;
+					position: absolute;
+					right: 20px;
+					transition: transform 0.3s ease;
+				}
+
+				&.active::after {
+					transform: rotate(180deg); /* Rotate the caret when the section is open */
+				}
+			}
+
+			.sub-menu {
+				display: none;
+				width: 100%;
+				background-color: #12385d;
+
+				li {
+					a {
+						text-decoration: none;
+						transition: color 0.3s ease;
+
+						&:hover {
+							color: #128fa5;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.primary-nav {
+		display: none;
+	}
+	.mobile-nav {
+		display: flex;
+	}
+}
