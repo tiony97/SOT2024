@@ -15,7 +15,7 @@
 		<link rel="stylesheet" href="./style.css" />
 		<title>SOT</title>
 	</head>
-	<body>
+	<body class="relative">
 		<!--Main Menu-->
 		<header class="primary-nav w-full flex items-center justify-between lg:px-12 md:px-12 px-6">
 			<a href="#" class="logo"><img src="./sot_logo.png" alt="logo" /></a>
@@ -147,61 +147,48 @@
 				</li>
 				<li class="menu-item"><a href="#">Contact Us</a></li>
 			</ul>
-		</header>
 
-		<!--Mobile Menu-->
-		<div class="mobile-nav w-full flex items-center justify-between lg:px-12 md:px-12 px-6">
-			<a href="#" class="logo"><img src="./sot_logo.png" alt="logo" /></a>
+			<!-- Menu Toggler for mobile -->
+			<button class="menu-toggler flex items-center justify-center">
+				<i class="fas fa-bars"></i>
+			</button>
 
-			<span id="menu-toggle" class="flex items-center justify-center"
-				><i class="fas fa-bars"></i
-			></span>
-
-			<!--Mobile Menu Links-->
-			<ul class="mobile-menu lg:px-12 md:px-12 px-6">
+			<!--Mobile Menu-->
+			<ul class="mobile-menu flex flex-col">
 				<li class="menu-item"><a href="#">Home</a></li>
 				<li class="menu-item"><a href="#">About Us</a></li>
 				<li class="menu-item menu-item-has-children">
-					<a href="#" class="sub-menu-toggle">Topic Areas</a>
-					<ul class="sub-menu">
-						<li class="menu-item"><a href="#">Assessment-Informed Instruction </a></li>
-						<li class="menu-item"><a href="#">Language of Instruction </a></li>
-
+					<a href="#" data-toggle="collapse">Topic Areas</a>
+					<ul class="sub-menu collapse">
+						<li class="menu-item"><a href="#">Assessment-Informed Instruction</a></li>
+						<li class="menu-item"><a href="#">Language of Instruction</a></li>
 						<li class="menu-item menu-item-has-children">
-							<a href="#">Materials Development </a>
-
-							<ul class="sub-menu">
+							<a href="#" data-toggle="collapse">Materials Development</a>
+							<ul class="sub-menu collapse">
 								<li class="menu-item">
 									<a href="#"
-										>Curriculum Scope and Sequence Development for Literacy and Numeracy
-									</a>
+										>Curriculum Scope and Sequence Development for Literacy and Numeracy</a
+									>
 								</li>
 								<li class="menu-item">
-									<a href="#">Teaching and Learning: Materials Development </a>
+									<a href="#">Teaching and Learning: Materials Development</a>
 								</li>
 							</ul>
 						</li>
-
 						<li class="menu-item"><a href="#">Remediation</a></li>
 						<li class="menu-item"><a href="#">Structured Pedagogy</a></li>
-
 						<li class="menu-item menu-item-has-children">
-							<a href="#">Teacher Professional Development </a>
-
-							<ul class="sub-menu">
-								<li class="menu-item">
-									<a href="#">Teacher Training</a>
-								</li>
-								<li class="menu-item">
-									<a href="#">Ongoing Teacher Support </a>
-								</li>
+							<a href="#" data-toggle="collapse">Teacher Professional Development</a>
+							<ul class="sub-menu collapse">
+								<li class="menu-item"><a href="#">Teacher Training</a></li>
+								<li class="menu-item"><a href="#">Ongoing Teacher Support</a></li>
 							</ul>
 						</li>
 					</ul>
 				</li>
 				<li class="menu-item menu-item-has-children">
-					<a href="#" class="sub-menu-toggle">Resources</a>
-					<ul class="sub-menu">
+					<a href="#" data-toggle="collapse">Resources</a>
+					<ul class="sub-menu collapse">
 						<li class="menu-item"><a href="#">Blogs</a></li>
 						<li class="menu-item"><a href="#">Checklists</a></li>
 						<li class="menu-item"><a href="#">High-Impact Teaching Strategies (HITS)</a></li>
@@ -210,8 +197,8 @@
 					</ul>
 				</li>
 				<li class="menu-item menu-item-has-children">
-					<a href="#" class="sub-menu-toggle">Technical Assistance</a>
-					<ul class="sub-menu">
+					<a href="#" data-toggle="collapse">Technical Assistance</a>
+					<ul class="sub-menu collapse">
 						<li class="menu-item"><a href="#">The Gambia</a></li>
 						<li class="menu-item"><a href="#">Malawi</a></li>
 						<li class="menu-item"><a href="#">Kenya</a></li>
@@ -224,57 +211,46 @@
 					</ul>
 				</li>
 				<li class="menu-item menu-item-has-children">
-					<a href="#" class="sub-menu-toggle">Numeracy-focused</a>
-					<ul class="sub-menu">
+					<a href="#" data-toggle="collapse">Numeracy-focused</a>
+					<ul class="sub-menu collapse">
 						<li class="menu-item"><a href="#">e-Learning</a></li>
-
 						<li class="menu-item menu-item-has-children">
-							<a href="#">Math Resources</a>
-
-							<ul class="sub-menu">
-								<li class="menu-item">
-									<a href="#">How-To Guide </a>
-								</li>
-								<li class="menu-item">
-									<a href="#">Mini-modules </a>
-								</li>
-								<li class="menu-item">
-									<a href="#">Materials Guide </a>
-								</li>
+							<a href="#" data-toggle="collapse">Math Resources</a>
+							<ul class="sub-menu collapse">
+								<li class="menu-item"><a href="#">How-To Guide</a></li>
+								<li class="menu-item"><a href="#">Mini-modules</a></li>
+								<li class="menu-item"><a href="#">Materials Guide</a></li>
 							</ul>
 						</li>
-
 						<li class="menu-item menu-item-has-children">
-							<a href="#">Research</a>
-
-							<ul class="sub-menu">
+							<a href="#" data-toggle="collapse">Research</a>
+							<ul class="sub-menu collapse">
 								<li class="menu-item">
 									<a href="#"
 										>Upcoming: South Africa: WhatsApp API-based CPD to improve teachers’
-										mathematical knowledge
-									</a>
+										mathematical knowledge</a
+									>
 								</li>
 								<li class="menu-item">
 									<a href="#"
 										>Ghana: Using co-creation to develop lessons/activities that support students’
-										problem-solving skills.
-									</a>
+										problem-solving skills.</a
+									>
 								</li>
 								<li class="menu-item">
 									<a href="#"
 										>South Africa: Strengthening Base-10 thinking strategies of teachers and
-										students
-									</a>
+										students</a
+									>
 								</li>
 							</ul>
 						</li>
-
 						<li class="menu-item"><a href="#">CoP</a></li>
 					</ul>
 				</li>
 				<li class="menu-item menu-item-has-children">
-					<a href="#" class="sub-menu-toggle">Research</a>
-					<ul class="sub-menu">
+					<a href="#" data-toggle="collapse">Research</a>
+					<ul class="sub-menu collapse">
 						<li class="menu-item"><a href="#">Middle Tier</a></li>
 						<li class="menu-item"><a href="#">Math</a></li>
 						<li class="menu-item"><a href="#">Assessment-Informed Instruction</a></li>
@@ -284,7 +260,7 @@
 				</li>
 				<li class="menu-item"><a href="#">Contact Us</a></li>
 			</ul>
-		</div>
+		</header>
 
 		<!--JS-->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -329,36 +305,40 @@
 
 		<!--Mobile Menu-->
 		<script>
-			//Menu Toggler
 			$(document).ready(function () {
-				$("#menu-toggle").click(function () {
-					$(".mobile-menu").slideToggle("slow", function () {
-						if ($(".mobile-menu").is(":visible")) {
-							$("#menu-toggle i").css("display", "none !important"); // Hide the Font Awesome icon
-							if (!$("#menu-toggle .close-icon").length) {
-								$("#menu-toggle").append(
-									'<span class="close-icon" style="font-size: 24px;">&#x00D7;</span>'
-								); // Add the Unicode "×" character
-							}
-						} else {
-							$("#menu-toggle i").css("display", "inline"); // Show the Font Awesome icon
-							$("#menu-toggle .close-icon").remove(); // Remove the Unicode "×" character
-						}
-					});
+				//Menu Toggler
+				$(".menu-toggler").click(function (e) {
+					const $this = $(this);
+					const $menu = $(".mobile-menu");
+
+					// Toggle the menu visibility
+					$menu.toggleClass("active");
+
+					// Toggle the icon class based on the menu's active state
+					if ($menu.hasClass("active")) {
+						$this.find("i").removeClass("fas fa-bars").addClass("fas fa-x");
+					} else {
+						$this.find("i").removeClass("fas fa-x").addClass("fas fa-bars");
+					}
 				});
-			});
+				//Accordion Menu Settings
+				$(".menu-item-has-children > a").click(function (e) {
+					e.preventDefault();
+					const $this = $(this);
+					const $subMenu = $this.next(".sub-menu");
 
-			//Mobile Menu Accordion
-			$(document).ready(function () {
-				$(".menu-item-has-children .sub-menu-toggle").click(function () {
-					// Close all other accordion items
-					$(".menu-item-has-children .sub-menu").not($(this).next()).slideUp();
+					// Close sibling submenus of the current menu item
+					$this
+						.parent()
+						.siblings(".menu-item-has-children")
+						.children(".sub-menu")
+						.slideUp()
+						.parent()
+						.removeClass("active");
 
-					$(".menu-item-has-children .sub-menu-toggle").not($(this)).removeClass("active");
-
-					// Toggle the clicked accordion item
-					$(this).next().slideToggle();
-					$(this).toggleClass("active");
+					// Toggle the current submenu
+					$subMenu.slideToggle();
+					$this.parent().toggleClass("active");
 				});
 			});
 		</script>
