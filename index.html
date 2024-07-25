@@ -149,8 +149,9 @@
 			</ul>
 
 			<!-- Menu Toggler for mobile -->
-			<button class="menu-toggler flex items-center justify-center">
-				<i class="fas fa-bars"></i>
+			<button class="menu-toggler">
+				<img src="./menu.png" alt="Menu Icon" class="menu-icon" />
+				<img src="./close.png" alt="Close Icon" class="close-icon" style="display: none" />
 			</button>
 
 			<!--Mobile Menu-->
@@ -314,13 +315,16 @@
 					// Toggle the menu visibility
 					$menu.toggleClass("active");
 
-					// Toggle the icon class based on the menu's active state
+					// Toggle the images based on the menu's active state
 					if ($menu.hasClass("active")) {
-						$this.find("i").removeClass("fas fa-bars").addClass("fas fa-x");
+						$this.find(".menu-icon").hide();
+						$this.find(".close-icon").show();
 					} else {
-						$this.find("i").removeClass("fas fa-x").addClass("fas fa-bars");
+						$this.find(".menu-icon").show();
+						$this.find(".close-icon").hide();
 					}
 				});
+
 				//Accordion Menu Settings
 				$(".menu-item-has-children > a").click(function (e) {
 					e.preventDefault();

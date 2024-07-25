@@ -19,14 +19,23 @@ body {
 
 	.menu-toggler {
 		display: none;
+		position: relative;
 		width: 40px;
 		height: 40px;
 		background: transparent;
 		border: 1px solid #fff;
 		outline: none;
 		cursor: pointer;
-		font-size: 20px;
-		color: #fff;
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 25px;
+			height: 25px;
+			object-fit: contain;
+			transform: translate(-50%, -50%);
+			transition: all 0.3s ease-in;
+		}
 	}
 
 	.main-menu {
@@ -175,10 +184,11 @@ body {
 			position: relative;
 			margin: 0;
 			opacity: 0;
-			transition: all 1s ease-in;
+			transition: all 0.3s ease-in;
 			> a {
 				display: block;
 				padding: 10px 15px;
+				font-size: 14px;
 				text-decoration: none;
 				color: #fff;
 
@@ -199,19 +209,28 @@ body {
 						left: 90%;
 						font-size: 10px;
 					}
+					&.active {
+						background-color: #128fa5;
+						font-weight: 700;
+					}
 				}
 
 				.sub-menu {
 					list-style: none;
 					padding: 0;
 					margin: 0;
+					background: #128fa5;
 					display: none;
 
 					.menu-item {
 						> a {
 							padding-left: 30px;
+							&:hover {
+								background-color: #82cfca;
+							}
 						}
 						.sub-menu {
+							background: #82cfca;
 							padding-left: 20px;
 						}
 					}
@@ -234,6 +253,7 @@ body {
 				}
 			}
 		}
+
 		&.active {
 			width: 70%;
 			.menu-item {
